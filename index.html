@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div id="nav">
+        <a href="#intro">Intro</a>
+        <a href="#projects">Projects</a>
+        <a href="#contact">Contact</a>
+    </div>
+
+    <div id="intro">
+        <h1 style="font-size: 5vw; text-align: center;">
+            <span id ="name" style="position: relative;">
+                <div id="color-wheel"></div>
+                Hayden Lee
+            </span>
+            <div id="roles">
+                <span id="role">Software Engineer<span>
+            </div>
+        </h1>
+
+        <div id="introduction">
+            <p> 
+                Hi! My name is Hayden and I am a software engineer currently based in Los Angeles.
+                Much like how an artist admires their finished piece of artwork, I take pride in how my projects 
+                - especially those I take ownership of in building - come together, solve problems, and just work.
+                Driven by opportunities to grow and improve, I'm passionate about learning new technologies, tools, and solutions 
+                that transform the tech landscape.
+            </p>
+        </div>
+    </div>
+
+    <div id ="projects">
+        <h1>Explore My Canvas of Projects</h1>
+        <a href="https://github.com/Hlee50/flip7" class="project-link">
+            <div class="project">
+                <img src="iconmonstr-paintbrush-1-240.png" alt="Paintbrush Icon" class="icon">
+                <strong>Flip 7&nbsp;&nbsp;&nbsp;</strong>
+                <span>Interactive implementation of the card game Flip 7</span>
+                <img src="iconmonstr-external-link-thin-240.png" class="icon-link">
+            </div>
+        </a>
+        <a href="https://github.com/Hlee50/AbuseScanner" class="project-link">
+            <div class="project">
+                <img src="iconmonstr-paint-bucket-10-240.png" alt="Paint Bucket Icon" class="icon">
+                <strong>Abuse Scanner</strong>
+                <span>API client for scanning reported malicious URLs or file hashes by querying Abuse.ch databases</span>
+                <img src="iconmonstr-external-link-thin-240.png" class="icon-link">
+            </div>
+        </a>    
+        <a href="https://github.com/Modjular/CS112-OctreeColorQuantizer" class="project-link">
+            <div class="project">
+                <img src="iconmonstr-eyedropper-4-240.png" alt="Eyedropper Icon" class="icon">
+                <strong>Color Quantizer&nbsp;&nbsp;&nbsp;</strong>
+                <span>Contributed to the uniform algorithm of a color quantizer final project for CS112</span>
+                <img src="iconmonstr-external-link-thin-240.png" class="icon-link">
+            </div>
+        </a>
+        <a href="https://github.com/Hlee50/TitanBot" class="project-link">
+            <div class="project">
+                <img src="iconmonstr-text-1-240.png" alt="Text Icon" class="icon">
+                <strong>TitanBot&nbsp;&nbsp;&nbsp;</strong>
+                <span>Chatbot final project for CS171</span>
+                <img src="iconmonstr-external-link-thin-240.png" class="icon-link">
+            </div>
+        </a>
+    </div>
+
+    <div id="contact">
+        <h1>Contact</h1>
+        <a href="mailto:haydenlee2000@gmail.com">Email</a>
+        <a href="https://linkedin.com/in/hayden-lee-693970221">LinkedIn</a>
+        <a href="https://github.com/Hlee50">Github</a>
+    </div>
+
+    <script>
+        const roles = ["Software Engineer", "Problem Solver", "Builder", "Learner"];
+        let i = 0;
+        let role = document.getElementById("role");
+        role.classList.remove("fade");
+        role.innerHTML = roles[i];
+        role.classList.add("fade"); 
+        setInterval(() => {
+            i = (i + 1)%roles.length;
+            role.classList.remove("fade");
+            setTimeout(() => {
+                role.innerHTML = roles[i];
+                role.classList.add("fade");
+            }, 500);  
+        }, 5000);
+    </script>
+</body>
+</html>
