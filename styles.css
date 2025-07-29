@@ -103,7 +103,7 @@ a:hover {
     justify-content: left;
     align-items: center;
     border-radius: 20px;
-    height: 15vh;
+    height: 6em;
     font-size: 120%;
     transition: 0.25s ease;
 }
