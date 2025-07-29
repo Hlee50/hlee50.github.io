@@ -53,8 +53,8 @@ a:hover {
     );
     position: absolute;
     right: 105%;
-    height: 100%;
-    width: 24.17%;
+    height: 1.5em;
+    width: 1.5em;
     border-radius: 50%;
     transition: transform 1s ease;
     mask-image: radial-gradient(circle, transparent 40%, black 40%);
@@ -108,11 +108,8 @@ a:hover {
 }
 
 .project:hover {
-    transform: scale(1.10);
-}
-
-.project:hover {
     background-color: lightskyblue;
+    transform: scale(1.10);
 }
 
 .project-link{
@@ -135,6 +132,12 @@ a:hover {
     top: 1vw;
     right: 1vw;
     width: 1vw;
+    opacity: 0;
+    transition: opacity 0.25s ease;
+}
+
+.project:hover .icon-link{
+    opacity: 1;
 }
 
 #contact {
@@ -151,7 +154,7 @@ a:hover {
 
 @media (max-width: 768px) {
     #nav {
-        font-size: 2vw;
+        font-size: 60%;
         padding : 3%;
     }
 
@@ -170,7 +173,7 @@ a:hover {
     }
 
     #roles {
-        font-size: 75%;
+        font-size: 100%;
     }
 
     #introduction {
@@ -193,6 +196,10 @@ a:hover {
     .icon {
         padding: 5%;
         width: 4vw;
+    }
+
+    .icon-link {
+        display: none;
     }
 
     #contact {
