@@ -105,6 +105,7 @@ a:hover {
     border-radius: 20px;
     height: 6em;
     font-size: 120%;
+    padding-right: 1%;
     transition: 0.25s ease;
 }
 
