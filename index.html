@@ -17,7 +17,6 @@
     <div id="intro">
         <h1 style="font-size: 5vw; text-align: center;">
             <span id ="name" style="position: relative;">
-                <div id="color-wheel"></div>
                 Hayden Lee
             </span>
             <div id="roles">
@@ -25,22 +24,13 @@
             </div>
         </h1>
 
-        <div id="introduction">
-            <p> 
-                Hi! My name is Hayden and I am a software engineer currently based in Los Angeles.
-                Much like how an artist admires their finished piece of artwork, I take pride in how my projects 
-                - especially those I take ownership of in building - come together, solve problems, and just work.
-                Driven by opportunities to grow and improve, I'm passionate about learning new technologies, tools, and solutions 
-                that transform the tech landscape.
-            </p>
-        </div>
+        <p id="intro-text"></p>
     </div>
 
     <div id ="projects">
-        <h1>Explore My Canvas of Projects</h1>
+        <h1>Experience/Projects</h1>
         <a href="https://github.com/Hlee50/flip7" class="project-link">
             <div class="project">
-                <img src="iconmonstr-paintbrush-1-240.png" alt="Paintbrush Icon" class="icon">
                 <strong>Flip 7&nbsp;&nbsp;&nbsp;</strong>
                 <span>Interactive Javascript implementation of the card game Flip 7</span>
                 <img src="iconmonstr-external-link-thin-240.png" class="icon-link">
@@ -48,7 +38,6 @@
         </a>
         <a href="https://github.com/Hlee50/AbuseScanner" class="project-link">
             <div class="project">
-                <img src="iconmonstr-paint-bucket-10-240.png" alt="Paint Bucket Icon" class="icon">
                 <strong>Abuse<br>Scanner&nbsp;&nbsp;&nbsp;</strong>
                 <span>Python API client for scanning reported malicious URLs or file hashes by querying Abuse.ch databases</span>
                 <img src="iconmonstr-external-link-thin-240.png" class="icon-link">
@@ -56,7 +45,6 @@
         </a>    
         <a href="https://github.com/Modjular/CS112-OctreeColorQuantizer" class="project-link">
             <div class="project">
-                <img src="iconmonstr-eyedropper-4-240.png" alt="Eyedropper Icon" class="icon">
                 <strong>Color<br>Quantizer&nbsp;&nbsp;&nbsp;</strong>
                 <span>Contributed to the uniform algorithm of a color quantizer project</span>
                 <img src="iconmonstr-external-link-thin-240.png" class="icon-link">
@@ -64,7 +52,6 @@
         </a>
         <a href="https://github.com/Hlee50/TitanBot" class="project-link">
             <div class="project">
-                <img src="iconmonstr-text-1-240.png" alt="Text Icon" class="icon">
                 <strong>TitanBot&nbsp;&nbsp;&nbsp;</strong>
                 <span>Python chatbot project based on Attack on Titan</span>
                 <img src="iconmonstr-external-link-thin-240.png" class="icon-link">
@@ -94,7 +81,16 @@
                 role.classList.add("fade");
             }, 500);  
         }, 5000);
+
+        const year = new Date().getFullYear() - 2023;
+
+        document.getElementById("intro-text").textContent = `Hi! My name is Hayden and I am a software engineer currently based in 
+        Los Angeles with ${year}+ years of experience in object-oriented programming, integration development, and customer success. I take 
+        pride in how my projects - especially those I take ownership of in building - come together, solve problems, and just work. Driven 
+        by opportunities to grow and improve, I'm passionate about learning new technologies, tools, and solutions that transform the tech 
+        landscape.`;
     </script>
+    
     <!-- Google tag (gtag.js) -->
     <script async src="https://www.googletagmanager.com/gtag/js?id=G-EGT9KK9P61"></script>
     <script>

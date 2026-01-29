@@ -41,31 +41,14 @@ a:hover {
     display: flex; 
     flex-direction: column; 
     justify-items: center; 
-    align-items: center; 
+    align-items: center;
     color:white;
     padding-top: 10%;
     padding-bottom: 25%;
 }
 
-#color-wheel {
-    background: conic-gradient(
-        red, orange, yellow, green, cyan, blue, violet, red
-    );
-    position: absolute;
-    right: 105%;
-    height: 1.5em;
-    width: 1.5em;
-    border-radius: 50%;
-    transition: transform 1s ease;
-    mask-image: radial-gradient(circle, transparent 40%, black 40%);
-}
-
-#color-wheel:hover {
-    transform: rotate(360deg);
-}
-
-#introduction {
-    width: 50vw;
+#intro-text {
+    width: 55vw;
     animation: fadeIn 1s;
 }
 
@@ -105,6 +88,7 @@ a:hover {
     border-radius: 20px;
     height: 6em;
     font-size: 120%;
+    padding-left: 3%;
     padding-right: 1%;
     transition: 0.25s ease;
 }
