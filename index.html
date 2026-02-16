@@ -1,11 +1,13 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="styles.css">
     <title>Hayden Lee</title>
 </head>
+
 <body>
     <div id="nav">
         <a href="#intro">Intro</a>
@@ -16,7 +18,7 @@
 
     <div id="intro">
         <h1 style="font-size: 5vw; text-align: center;">
-            <span id ="name" style="position: relative;">
+            <span id="name" style="position: relative;">
                 Hayden Lee
             </span>
             <div id="roles">
@@ -27,8 +29,15 @@
         <p id="intro-text"></p>
     </div>
 
-    <div id ="projects">
+    <div id="projects">
         <h1>Experience/Projects</h1>
+        <a href="https://github.com/Hlee50/urlscanlite" class="project-link">
+            <div class="project">
+                <strong>URL Scan&nbsp;&nbsp;&nbsp;<br>Lite&nbsp;&nbsp;&nbsp;</strong>
+                <span>Lite, minimalistic version of urlscan.io built with React and Typescript</span>
+                <img src="iconmonstr-external-link-thin-240.png" class="icon-link">
+            </div>
+        </a>
         <a href="https://github.com/Hlee50/flip7" class="project-link">
             <div class="project">
                 <strong>Flip 7&nbsp;&nbsp;&nbsp;</strong>
@@ -38,22 +47,16 @@
         </a>
         <a href="https://github.com/Hlee50/AbuseScanner" class="project-link">
             <div class="project">
-                <strong>Abuse<br>Scanner&nbsp;&nbsp;&nbsp;</strong>
-                <span>Python API client for scanning reported malicious URLs or file hashes by querying across Abuse.ch databases</span>
-                <img src="iconmonstr-external-link-thin-240.png" class="icon-link">
-            </div>
-        </a>    
-        <a href="https://github.com/Modjular/CS112-OctreeColorQuantizer" class="project-link">
-            <div class="project">
-                <strong>Color<br>Quantizer&nbsp;&nbsp;&nbsp;</strong>
-                <span>Implemented the uniform algorithm of a color quantizer project</span>
+                <strong>Abuse&nbsp;&nbsp;&nbsp;<br>Scanner&nbsp;&nbsp;&nbsp;</strong>
+                <span>Python API client for scanning reported malicious URLs or file hashes across Abuse.ch
+                    databases</span>
                 <img src="iconmonstr-external-link-thin-240.png" class="icon-link">
             </div>
         </a>
-        <a href="https://github.com/Hlee50/TitanBot" class="project-link">
+        <a href="https://github.com/Modjular/CS112-OctreeColorQuantizer" class="project-link">
             <div class="project">
-                <strong>TitanBot&nbsp;&nbsp;&nbsp;</strong>
-                <span>Python chatbot project based on Attack on Titan</span>
+                <strong>Color&nbsp;&nbsp;&nbsp;<br>Quantizer&nbsp;&nbsp;&nbsp;</strong>
+                <span>Implemented the uniform algorithm of a color quantizer project</span>
                 <img src="iconmonstr-external-link-thin-240.png" class="icon-link">
             </div>
         </a>
@@ -72,14 +75,14 @@
         let role = document.getElementById("role");
         role.classList.remove("fade");
         role.innerHTML = roles[i];
-        role.classList.add("fade"); 
+        role.classList.add("fade");
         setInterval(() => {
-            i = (i + 1)%roles.length;
+            i = (i + 1) % roles.length;
             role.classList.remove("fade");
             setTimeout(() => {
                 role.innerHTML = roles[i];
                 role.classList.add("fade");
-            }, 500);  
+            }, 500);
         }, 5000);
 
         const year = new Date().getFullYear() - 2023;
@@ -90,19 +93,16 @@
         by opportunities to grow and improve, I'm passionate about learning new technologies, tools, and solutions that transform the tech 
         landscape.`;
     </script>
-    
+
     <!-- Google tag (gtag.js) -->
     <script async src="https://www.googletagmanager.com/gtag/js?id=G-EGT9KK9P61"></script>
     <script>
-      window.dataLayer = window.dataLayer || [];
-      function gtag(){dataLayer.push(arguments);}
-      gtag('js', new Date());
-    
-      gtag('config', 'G-EGT9KK9P61');
+        window.dataLayer = window.dataLayer || [];
+        function gtag() { dataLayer.push(arguments); }
+        gtag('js', new Date());
+
+        gtag('config', 'G-EGT9KK9P61');
     </script>
 </body>
 
 </html>
-
-
-
