@@ -1,30 +1,33 @@
 @import url('https://fonts.googleapis.com/css2?family=Roboto+Mono:ital,wght@0,100..700;1,100..700&family=Space+Mono:ital,wght@0,400;0,700;1,400;1,700&display=swap');
+
 html {
     scroll-behavior: smooth;
 }
+
 body {
     background-color: slategray;
     font-family: "Roboto Mono";
 }
-h1, h2, h3, h4, h5, h6 {
-    font-family: "Space Mono"; 
+
+h1,h2,h3,h4,h5,h6 {
+    font-family: "Space Mono";
 }
 
 #nav {
     background-color: slategray;
     position: fixed;
     top: 0;
-    left:0; 
-    right:0;
-    display: flex; 
-    flex-direction: row; 
-    justify-content: center; 
+    left: 0;
+    right: 0;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
     column-gap: 1%;
     padding: 1%;
     z-index: 1;
 }
 
-a{
+a {
     color: white;
     font-size: 150%;
     text-decoration: none;
@@ -37,12 +40,12 @@ a:hover {
     border-radius: 10px;
 }
 
-#intro{
-    display: flex; 
-    flex-direction: column; 
-    justify-items: center; 
+#intro {
+    display: flex;
+    flex-direction: column;
+    justify-items: center;
     align-items: center;
-    color:white;
+    color: white;
     padding-top: 10%;
     padding-bottom: 25%;
 }
@@ -73,7 +76,7 @@ a:hover {
     justify-content: center;
     align-items: right;
     row-gap: 1vh;
-    color:white;
+    color: white;
     width: 75vw;
     padding-top: 5%;
     padding-bottom: 5%;
@@ -82,9 +85,8 @@ a:hover {
 
 .project {
     position: relative;
-    display: flex;
-    flex-direction: row;
-    justify-content: left;
+    display: grid;
+    grid-template-columns: 15% 1fr;
     align-items: center;
     border-radius: 20px;
     height: 6em;
@@ -94,12 +96,17 @@ a:hover {
     transition: 0.25s ease;
 }
 
+.project-title {
+    display: flex;
+    align-items: center;
+}
+
 .project:hover {
     background-color: lightskyblue;
     transform: scale(1.10);
 }
 
-.project-link{
+.project-link {
     padding: 0;
     font-size: 1em;
     text-decoration: none;
@@ -123,29 +130,36 @@ a:hover {
     transition: opacity 0.25s ease;
 }
 
-.project:hover .icon-link{
+.project:hover .icon-link {
     opacity: 1;
 }
 
 #contact {
-    color:white;
+    color: white;
     width: 75vw;
     padding-bottom: 5%;
     margin: 0 auto;
 }
 
 @keyframes fadeIn {
-    0% { opacity: 0; transform: translateX(2rem);}
-    100% { opacity: 1; transform: translateX(0);}
+    0% {
+        opacity: 0;
+        transform: translateX(2rem);
+    }
+
+    100% {
+        opacity: 1;
+        transform: translateX(0);
+    }
 }
 
 @media (max-width: 768px) {
     #nav {
         font-size: 60%;
-        padding : 3%;
+        padding: 3%;
     }
 
-    #intro{
+    #intro {
         padding-top: 50%;
         padding-bottom: 100%;
     }
@@ -169,9 +183,10 @@ a:hover {
         width: 85vw;
         row-gap: 50%;
         padding-top: 10%;
-    } 
+    }
 
-    .project{
+    .project {
+        grid-template-columns: 30% 1fr;
         font-size: 140%;
         height: 7em;
     }
