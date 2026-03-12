@@ -1,5 +1,5 @@
 # Portfolio
 
-[Website](https://hlee50.github.io/)
+🌐[Website](https://hlee50.github.io/)
 
-[Resume](./resume.pdf)
+📄[Resume](./resume.pdf)
