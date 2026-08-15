@@ -2,11 +2,13 @@
 
 html {
     scroll-behavior: smooth;
+    overflow-x: hidden;
 }
 
 body {
-    background-color: slategray;
+    background-color: rgb(50,50,50);
     font-family: "Roboto Mono";
+    overflow-x: hidden;
 }
 
 h1,h2,h3,h4,h5,h6 {
@@ -14,7 +16,7 @@ h1,h2,h3,h4,h5,h6 {
 }
 
 #nav {
-    background-color: slategray;
+    background-color: rgb(50,50,50);
     position: fixed;
     top: 0;
     left: 0;
@@ -31,13 +33,18 @@ a {
     color: white;
     font-size: 150%;
     text-decoration: none;
-    padding-left: 1%;
-    padding-right: 1%;
+    padding: 0.5% 1% 0.5% 1%;
+    border: 2px solid transparent;
 }
 
-a:hover {
-    background-color: lightskyblue;
-    border-radius: 10px;
+#nav a:hover {
+    border-color: deepskyblue;
+    border-radius: 5px;
+}
+
+#nav a.active {
+    border-color: deepskyblue;
+    border-radius: 5px;
 }
 
 #intro {
@@ -58,16 +65,63 @@ a:hover {
 
 #roles {
     font-size: 50%;
-    padding-top: 3%;
+    padding-top: 1%;
+    width: 100%;
+    overflow: hidden;
 }
 
-#role {
-    opacity: 0;
-    transition: opacity 0.5s ease;
+#roles::before,
+#roles::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    width: 10%;
+    z-index: 1;
+    pointer-events: none;
 }
 
-#role.fade {
-    opacity: 1;
+#roles::before {
+    left: 0;
+    background: linear-gradient(
+        to right,
+        rgb(50,50,50) 0%,
+        transparent 100%
+    );
+}
+
+#roles::after {
+    right: 0;
+    background: linear-gradient(
+        to left,
+        rgb(50,50,50) 0%,
+        transparent 100%
+    );
+}
+
+#role-track {
+    display: flex;
+    animation: scroll 30s linear infinite;
+}
+
+.role-group {
+    display: flex;
+    flex-shrink: 0;
+}
+
+.role-group span {
+    white-space: nowrap;
+    padding: 0 50px;
+}
+
+@keyframes scroll {
+    from {
+        transform: translateX(0);
+    }
+
+    to {
+        transform: translateX(-33.333333%);
+    }
 }
 
 #projects {
@@ -88,7 +142,8 @@ a:hover {
     display: grid;
     grid-template-columns: 15% 1fr;
     align-items: center;
-    border-radius: 20px;
+    border: 2px solid transparent;
+    border-radius: 5px;
     height: 6em;
     font-size: 120%;
     padding-left: 3%;
@@ -102,7 +157,7 @@ a:hover {
 }
 
 .project:hover {
-    background-color: lightskyblue;
+    border-color: deepskyblue;
     transform: scale(1.10);
 }
 
@@ -141,6 +196,11 @@ a:hover {
     margin: 0 auto;
 }
 
+#contact a:hover {
+    border-color: deepskyblue;
+    border-radius: 5px;
+}
+
 @keyframes fadeIn {
     0% {
         opacity: 0;
@@ -170,6 +230,11 @@ a:hover {
 
     #roles {
         font-size: 100%;
+    }
+
+    .role-group span {
+        white-space: nowrap;
+        padding: 0 25px;
     }
 
     #intro-text {

@@ -23,7 +23,28 @@
                 Hayden Lee
             </span>
             <div id="roles">
-                <span id="role">Software Engineer<span>
+                <div id="role-track">
+                    <div class="role-group">
+                        <span>Software Engineer</span>
+                        <span>Problem Solver</span>
+                        <span>Knowledge Seeker</span>
+                        <span>Builder</span>
+                    </div>
+
+                    <div class="role-group">
+                        <span>Software Engineer</span>
+                        <span>Problem Solver</span>
+                        <span>Knowledge Seeker</span>
+                        <span>Builder</span>
+                    </div>
+
+                    <div class="role-group">
+                        <span>Software Engineer</span>
+                        <span>Problem Solver</span>
+                        <span>Knowledge Seeker</span>
+                        <span>Builder</span>
+                    </div>
+                </div>
             </div>
         </h1>
 
@@ -37,7 +58,7 @@
                 <div class="project-title">
                     <strong>URL Scan<br>Lite</strong>
                 </div>
-                <p>Lite, minimalist version of urlscan.io built with React and Typescript</p>
+                <p>Lite, minimalist version of a website scanner built with React and Typescript</p>
                 <img src="iconmonstr-external-link-thin-240.png" class="icon-link">
             </div>
         </a>
@@ -78,20 +99,28 @@
     </div>
 
     <script>
-        const roles = ["Software Engineer", "Problem Solver", "Knowledge Seeker", "Builder"];
-        let i = 0;
-        let role = document.getElementById("role");
-        role.classList.remove("fade");
-        role.innerHTML = roles[i];
-        role.classList.add("fade");
-        setInterval(() => {
-            i = (i + 1) % roles.length;
-            role.classList.remove("fade");
-            setTimeout(() => {
-                role.innerHTML = roles[i];
-                role.classList.add("fade");
-            }, 500);
-        }, 5000);
+        const sections = document.querySelectorAll("#intro, #projects, #contact");
+        const links = document.querySelectorAll("#nav a");
+
+        function updateNav() {
+            const position = window.scrollY + 100;
+            let current = sections[0];
+
+            sections.forEach(section => {
+                if (position >= section.offsetTop) current = section;
+            });
+
+            if (window.scrollY + window.innerHeight >= document.documentElement.scrollHeight - 5) {
+                current = sections[2];
+            }
+
+            links.forEach(link =>
+                link.classList.toggle("active", link.getAttribute("href") === `#${current.id}`)
+            );
+        }
+
+        window.addEventListener("scroll", updateNav);
+        updateNav();
 
         const year = new Date().getFullYear() - 2023;
 
