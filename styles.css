@@ -287,7 +287,7 @@ a {
     }
 
     #name {
-        font-size: 10vw;
+        font-size: 12vw;
     }
 
     #devicons {
@@ -300,8 +300,8 @@ a {
     }
 
     #intro-text {
-        width: 75vw;
-        font-size: 70%;
+        width: 72vw;
+        font-size: 75%;
         margin-top: 3%;
     }
 
