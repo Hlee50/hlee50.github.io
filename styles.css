@@ -277,7 +277,7 @@ a {
 
 @media (max-width: 768px) {
     #nav {
-        font-size: 60%;
+        font-size: 65%;
         padding: 3% 3% 6% 3%;
     }
 
@@ -309,7 +309,7 @@ a {
         font-size: 50%;
         width: 85vw;
         height: auto;
-        padding-top: 10%;
+        padding-top: 12%;
         padding-bottom: 20%;
     }
 
@@ -366,8 +366,8 @@ a {
     }
 
     .icon-contact {
-        height: 5vw;
-        width: 5vw;
+        height: 7vw;
+        width: 7vw;
     }
 
     #footer {
