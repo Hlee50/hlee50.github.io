@@ -34,21 +34,14 @@ a {
     color: white;
     font-size: 150%;
     text-decoration: none;
-    padding: 0.5% 1% 0.5% 1%;
+    padding: 0.5% 1%;
+    transition: background-color 0.15s ease, color 0.15s ease;
 }
 
 #nav a.active {
     background-color: rgba(0, 0, 0, 0.3);
     color: deepskyblue;
     border-radius: 10px;
-}
-
-@media (hover: hover) {
-    #nav a:hover {
-        background-color: rgba(0, 0, 0, 0.3);
-        color: deepskyblue;
-        border-radius: 10px;
-    }
 }
 
 #intro {
@@ -155,7 +148,7 @@ a {
     border: 2px solid transparent;
     border-radius: 5px;
     overflow: hidden;
-    transition: border-color 0.25s ease;
+    transition: border-color 0.2s ease;
 }
 
 .project .project-img {
@@ -164,7 +157,7 @@ a {
     height: 100%;
     object-fit: cover;
     object-position: top;
-    transition: filter 0.25s ease;
+    transition: filter 0.2s ease;
 }
 
 .project .external-link {
@@ -175,7 +168,7 @@ a {
     height: auto;
     opacity: 0;
     transform: rotate(45deg);
-    transition: opacity 0.25s ease;
+    transition: opacity 0.2s ease;
 }
 
 .project-details {
@@ -187,7 +180,7 @@ a {
     height: 100%;
     width: 100%;
     opacity: 0;
-    transition: opacity 0.25s ease;
+    transition: opacity 0.2s ease;
 }
 
 .project-desc {
@@ -261,6 +254,18 @@ a {
     justify-content: center;
     color:white;
     opacity: 0.5;
+}
+
+@media (hover: hover) {
+    #nav a:hover {
+        background-color: rgba(0, 0, 0, 0.3);
+        color: deepskyblue;
+        border-radius: 10px;
+    }
+
+    #devicon-track:hover {
+        animation-play-state: paused;
+    }
 }
 
 @keyframes fadeIn {
