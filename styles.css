@@ -148,7 +148,7 @@ a {
     border: 2px solid transparent;
     border-radius: 5px;
     overflow: hidden;
-    transition: border-color 0.2s ease;
+    transition: border-color 0.25s ease;
 }
 
 .project .project-img {
@@ -157,7 +157,7 @@ a {
     height: 100%;
     object-fit: cover;
     object-position: top;
-    transition: filter 0.2s ease;
+    transition: filter 0.25s ease;
 }
 
 .project .external-link {
@@ -168,7 +168,7 @@ a {
     height: auto;
     opacity: 0;
     transform: rotate(45deg);
-    transition: opacity 0.2s ease;
+    transition: opacity 0.25s ease;
 }
 
 .project-details {
@@ -180,7 +180,7 @@ a {
     height: 100%;
     width: 100%;
     opacity: 0;
-    transition: opacity 0.2s ease;
+    transition: opacity 0.25s ease;
 }
 
 .project-desc {
