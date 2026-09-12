@@ -206,24 +206,6 @@ a {
     text-decoration: none;
 }
 
-.icon {
-    padding: 3%;
-    width: 2vw;
-}
-
-.icon-link {
-    position: absolute;
-    top: 1vw;
-    right: 1vw;
-    width: 1vw;
-    opacity: 0;
-    transition: opacity 0.25s ease;
-}
-
-.project:hover .icon-link {
-    opacity: 1;
-}
-
 #contact {
     display: flex;
     justify-content: flex-end;
@@ -233,20 +215,14 @@ a {
     margin: 0 auto;
 }
 
-#contact a:hover {
-    color: deepskyblue;
-    border-radius: 5px;
-}
-
 .icon-contact {
-    color: white;
     height: 2vw;
     width: 2vw;
+    transition: color 0.15s ease;
 }
 
 .icon-contact:hover {
     color: deepskyblue;
-    opacity: 1;
 }
 
 #footer {
@@ -354,15 +330,6 @@ a {
 
     .project:hover .project-img {
         filter: none;
-    }
-
-    .icon {
-        padding: 5%;
-        width: 4vw;
-    }
-
-    .icon-link {
-        display: none;
     }
 
     #contact {
