@@ -239,7 +239,7 @@ a {
         border-radius: 10px;
     }
 
-    #devicon-track:hover {
+    #devicon-track:has(i:hover) {
         animation-play-state: paused;
     }
 }
